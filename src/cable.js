@@ -1,5 +1,4 @@
-const WS_BASE_URL = "ws://pixel-fetch-api.herokuapp.com"
-// const WS_BASE_URL = "ws://localhost:3000"
+const WS_BASE_URL = "wss://pixel-fetch-api.herokuapp.com"
 
 const connection = ActionCable.createConsumer(`${WS_BASE_URL}/cable`)
 

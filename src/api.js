@@ -1,5 +1,4 @@
-const BASE_URL = "http://pixel-fetch-api.herokuapp.com"
-// const BASE_URL = "http://localhost:3000"
+const BASE_URL = "https://pixel-fetch-api.herokuapp.com"
 
 function fetchBoard(id) {
   return fetch(`${BASE_URL}/api/v1/canvas/${id}`)
