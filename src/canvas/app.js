@@ -5,7 +5,7 @@ class App {
     
     this.coords = document.querySelector("#coords")
 
-    this.boardId = new URLSearchParams(window.location.search).get("board")
+    this.boardId = new URLSearchParams(window.location.search).get("canvas")
   }
 
   init() {
@@ -27,11 +27,11 @@ class App {
 
   subscribeToBoardChannel() {
     createBoardSubscription(this.boardId, {
-      onConnected: () => console.log("connected"),
-      onDisconnected: () => console.log("disconnected"),
-      onRejected: () => console.log("rejected"),
+      onConnected: () => console.log("web socket connected"),
+      onDisconnected: () => console.log("web socket disconnected"),
+      onRejected: () => console.log("web socket rejected"),
       onReceived: ({ coords, color }) => {
-        console.log("socket data received", { coords, color })
+        console.log("web socket data received", { coords, color })
         this.canvas.drawPixel(coords, color)
       },
     })

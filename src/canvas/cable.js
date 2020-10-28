@@ -9,7 +9,7 @@ function createBoardSubscription(id, {
   onReceived 
 }) {
   connection.subscriptions.create({
-    channel: "BoardChannel",
+    channel: "CanvasChannel",
     id
   },
   {
