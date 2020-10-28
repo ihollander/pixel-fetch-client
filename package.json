@@ -1,0 +1,23 @@
+{
+  "name": "pixel-fetch-client",
+  "version": "1.0.0",
+  "description": "Client for displaying canvas from [Pixel Fetch API](https://github.com/ihollander/pixel-fetch-api).",
+  "main": "index.js",
+  "scripts": {
+    "start": "open http://localhost:5000/?canvas=Flatiron && serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihollander/pixel-fetch-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihollander/pixel-fetch-client/issues"
+  },
+  "homepage": "https://github.com/ihollander/pixel-fetch-client#readme",
+  "devDependencies": {
+    "serve": "^11.3.2"
+  }
+}
