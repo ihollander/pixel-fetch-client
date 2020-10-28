@@ -2,6 +2,8 @@
 
 Welcome to [Pixel Fetch](https://ihollander.github.io/pixel-fetch-client/?canvas=Flatiron), a collaborative canvas for drawing things by making `fetch` requests!
 
+This idea is heavily inspired by [/r/place](https://en.wikipedia.org/wiki/Place_(Reddit)) and [Flatiron Field Day](https://medium.com/flatiron-labs/flatiron-field-day-28f5def4c9f6).
+
 ## Setup
 
 To run this project locally, fork and clone this project. Then, install the dependencies (so you can run the project on a local server):
@@ -27,6 +29,8 @@ http://localhost:5000/?canvas=Flatiron
 Take note of the end of the URL (`canvas=Flatiron`); this identifies which canvas we're working with - in this example, the **name** is `Flatiron`.
 
 We'll use that as the **name** for the canvas for making our `fetch` requests.
+
+The code for displaying the current canvas also uses that **name** to load the canvas data and subscribe to any changes to the canvas on the server. Code for displaying the canvas is in the `./src/canvas` directory; you don't need to interact with that code, but feel free to explore it and see how things work.
 
 ## Testing
 
@@ -68,7 +72,7 @@ Not sure what to do next? This project is pretty open ended! Your main objective
 Here are some suggestions with what to do from there:
 
 - Create a new canvas (see API Endpoints for how to create a new canvas)
-- Implement functionality to draw a pixel when the canvas is clicked
+- Implement functionality to draw a pixel when the canvas is clicked (see `./src/index.js` for some starter code)
 - Set up a game: make a squares of different colors, and defend your squares from opposing players
 - Make a snake game
 - Make a battleship game
@@ -166,7 +170,7 @@ http://localhost:5000/?canvas=name
 Or on the hosted site:
 
 ```
-http://localhost:5000/?canvas=name
+https://ihollander.github.io/pixel-fetch-client/?canvas=name
 ```
 
 ## Example Response
@@ -204,7 +208,7 @@ http://localhost:5000/?canvas=name
 Or on the hosted site:
 
 ```
-http://localhost:5000/?canvas=name
+https://ihollander.github.io/pixel-fetch-client/?canvas=name
 ```
 
 #### Headers
